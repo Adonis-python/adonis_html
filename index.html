@@ -9,6 +9,8 @@
         body {
             text-align: center;
             background-color: rgb(184, 156, 123);
+            font-family: 'DFKai-SB';
+
         }
 
         /* 
@@ -18,6 +20,50 @@
 
         .abc {
             background-color: aqua;
+            padding: 24px 24px;
+        }
+
+        #cde {
+            background-color: white;
+            /* padding: 48px 40px; */
+            border: 20px red;
+        }
+
+        /* 僅限id="cde" 裡的img使用 */
+        #cde img {
+            /* 圖片大小 */
+            width: 30%;
+            /* 圖片 */
+            margin: 12px;
+            /* 圖片邊邊 */
+            border-radius: 12px;
+        }
+
+        #bmitable {
+            width: 80%;
+            margin: 12px auto;
+            height: 300px;
+
+        }
+
+        #bmitable th {
+            background-color: rgb(97, 220, 97);
+            text-align: center;
+            color: blue;
+            text-align: left;
+
+        }
+
+        #bmitable td {
+            background-color: white;
+            text-align: center;
+
+        }
+
+        #zzz {
+            text-align: left;
+            background-color: yellow;
+            color: purple;
         }
     </style>
 
@@ -54,7 +100,7 @@
     </ol>
     <hr>
 
-    <h2 class="abc">好文章連結</h2>
+    <h2 style="background-color: red; padding: px24 " class="abc">好文章連結</h2>
     <li><a target="_blank"
             href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6">健身初學者必看！10個常見的健身迷思</a><br>
     </li>
@@ -63,7 +109,7 @@
     <li><a target="_blank" href="https://www.fitnessfactory.com.tw/tw">Fitness factory｜健身工廠</a>
     </li>
     <h2 class="abc">一天所需卡路里</h2>
-    <table border="1">
+    <table border="1" id="bmitable">
         <thead>
             <tr>
                 <th>每天活動量</th>
@@ -91,7 +137,7 @@
             </tr>
         </thead>
     </table>
-    <ol style="text-align: left;">
+    <ol id="zzz">
         <li><a href="bmi.html">計算BMI:</a><br>
             一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體<br>重屬於「過重」。</li>
         <br>
@@ -103,10 +149,12 @@
         </li>
     </ol>
     <hr>
-    <h2 class="abc">健身照片</h2>
-    <img width="33%" src="img/pic-1.jpg" alt="">
-    <img width="33%" src="img/pic-2.jpg" alt="">
-    <img width="33%" src="img/pic-3.jpg" alt="">
+    <h2 id="cde">健身照片</h2>
+    <div id="cde">
+        <img src="img/pic-1.jpg" alt="">
+        <img src="img/pic-2.jpg" alt="">
+        <img src="img/pic-3.jpg" alt="">
+    </div>
     <br>
     <br>
     <h2 class="abc">健身影片</h2>
