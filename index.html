@@ -7,18 +7,36 @@
 
     <link rel="stylesheet" href="css/style.css">
     <style>
-        h2 {
+        h1 {
             display: inline-block;
-            width: 400px;
+            width: 500px;
             padding: 12px;
             border-radius: 6px;
             /* 編框 */
             border: 1px solid black;
+            font-size: 90px;
         }
 
-        .abc {
-            background-color: aqua;
-            padding: 24px 24px;
+        h3,
+        p {
+            font-size: 25px;
+        }
+
+        select {
+            width: 50%;
+            height: 50px;
+            font-size: 40px;
+        }
+
+        ul,
+        ol {
+            text-align: left;
+            list-style-position: inside;
+        }
+
+        li {
+            font-size: 35px;
+            padding: 10px 5px;
         }
 
         #cde {
@@ -41,6 +59,7 @@
             width: 80%;
             margin: 12px auto;
             height: 300px;
+            font-size: 25px;
 
         }
 
@@ -48,22 +67,32 @@
             background-color: rgb(97, 220, 97);
             text-align: center;
             color: blue;
-            text-align: left;
-
+            text-align: center;
         }
 
+        /* td第一列 */
         #bmitable td:first-child {
-            background-color: white;
-            text-align: center;
+            background-color: rgb(28, 187, 212);
+        }
 
-
+        #bmitable td {
+            background-color: aquamarine;
         }
 
         #zzz {
-            text-align: left;
-            background-color: yellow;
+            /* background-color: yellow; */
             color: purple;
-            margin-top: 12px;
+            margin-top: 40px;
+            text-align: center;
+            list-style-position: inside;
+        }
+
+        #FormTitle {
+            border: 0px solid black;
+            background-color: white;
+            display: inline-block;
+            font-size: 60px;
+
         }
     </style>
 
@@ -73,11 +102,12 @@
 
 <body>
     <h1 style="background-color: blue;">何謂健身?</h1>
-    <img width="100%" src="https://t3.ftcdn.net/jpg/03/50/81/90/360_F_350819094_ASJQuvwGOy4BpQwb096TntNE9J1D4UP5.jpg"
+    <br>
+    <img width="1500px" src="https://t3.ftcdn.net/jpg/03/50/81/90/360_F_350819094_ASJQuvwGOy4BpQwb096TntNE9J1D4UP5.jpg"
         alt="">
     <h3>健身，英文稱為workout，健身這兩個字拆開來的意思就是健康身體，通過各種運動方式或方法來<br>增強力量、增加
         肌肉量、柔韌性、耐力，以及提高協調和控制身體各部分的能力來使我們的身體更<br>強健。</h3>
-    <p> 除了塑造好身材，透過健身可以刺激我們身體的肌肉，再搭配飲食的控制，這能大大幫助我們的肌肉量增加，以及<br>
+    <p> 除了塑造好身材，透過健身可以<b>刺激我們身體的肌肉</b>，再搭配<b>飲食的控制</b>，這能大大幫助我們的肌肉量增加，以及<br>
         讓我們的肌肉更加的結實。
         <br>
         <br>
@@ -86,21 +116,23 @@
     </p>
     <hr>
     <h2>健身的10個好處</h2>
-    <ol style="text-align: left;">
-        <li>增加基礎代謝率</li>
-        <li>預防疾病和提高免疫力</li>
-        <li>改善心情</li>
-        <li>改善睡眠</li>
-        <li>增加自信</li>
-        <li>增強記憶力</li>
-        <li>增強心肺能力</li>
-        <li>提升睡眠品質</li>
-        <li>釋放工作的壓力</li>
-        <li>增加肌肉助於減肥</li>
-    </ol>
+    <div style="display: flex; justify-content: center;">
+        <ul>
+            <li>增加基礎代謝率</li>
+            <li>預防疾病和提高免疫力</li>
+            <li>改善心情</li>
+            <li>改善睡眠</li>
+            <li>增加自信</li>
+            <li>增強記憶力</li>
+            <li>增強心肺能力</li>
+            <li>提升睡眠品質</li>
+            <li>釋放工作的壓力</li>
+            <li>增加肌肉助於減肥</li>
+            </ol>
+    </div>
     <hr>
 
-    <h2 style="background-color: red; padding: px24 " class="abc">好文章連結</h2>
+    <h2>好文章連結</h2>
     <li><a target="_blank"
             href="https://www.fe-amart.com.tw/index.php/life-style/life-info/secret-recipe/hero-6">健身初學者必看！10個常見的健身迷思</a><br>
     </li>
@@ -108,7 +140,7 @@
     </li>
     <li><a target="_blank" href="https://www.fitnessfactory.com.tw/tw">Fitness factory｜健身工廠</a>
     </li>
-    <h2 class="abc">一天所需卡路里</h2>
+    <h2>一天所需卡路里</h2>
     <table border="1" id="bmitable">
         <thead>
             <tr>
@@ -137,19 +169,23 @@
             </tr>
         </thead>
     </table>
-    <ol id="zzz">
-        <li><a href="bmi.html">計算BMI:</a><br>
-            一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體<br>重屬於「過重」。</li>
-        <br>
-        <li>計算所需熱量:<br>
-            因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡<br>之間(=20~25大卡*65公斤)</li>
-        <br>
-        <li>力行健康體重管理:<br>
-            多運動和健康吃，肥胖者每天減少攝取500大卡熱量；或減少攝食300大卡<br>熱量，增加體能活動多消耗200大卡，就可以每周減重約0.5公斤。提醒您!<br>控制體重時，每日熱量攝取不可低於1200大卡。
-        </li>
-    </ol>
+    <div style="display: flex; justify-content: center;background-color: antiquewhite;">
+        <ol>
+            <li><a href="bmi.html">計算BMI:</a><br>
+                一位民眾身高160公分，體重65公斤，BMI25.4kg/m2(=65÷1.6÷1.6)，體<br>重屬於「過重」。
+            </li>
+            <br>
+            <li>計算所需熱量:<br>
+                因他的工作為坐辦公室，屬輕量工作，每天攝取熱量應在1300至1625大卡<br>之間(=20~25大卡*65公斤)
+            </li>
+            <br>
+            <li>力行健康體重管理:<br>
+                多運動和健康吃，肥胖者每天減少攝取500大卡熱量；或減少攝食300大卡<br>熱量，增加體能活動多消耗200大卡，就可以每周減重約0.5公斤。提醒您!<br>控制體重時，每日熱量攝取不可低於1200大卡。
+            </li>
+        </ol>
+    </div>
     <hr>
-    <h2 id="cde">健身照片</h2>
+    <h2>健身照片</h2>
     <div id="cde">
         <img src="img/pic-1.jpg" alt="">
         <img src="img/pic-2.jpg" alt="">
@@ -157,44 +193,45 @@
     </div>
     <br>
     <br>
-    <h2 class="abc">健身影片</h2>
-    <iframe width="49%" height="522" src="https://www.youtube.com/embed/Crda1Sv9mks"
+    <h2>健身影片</h2>
+    <br>
+    <iframe width="47%" height="522" src="https://www.youtube.com/embed/Crda1Sv9mks"
         title="Do This Workout To Lose Weight | 2020 2 Weeks Shred Challenge" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="49%" height="523" src="https://www.youtube.com/embed/2qdk33sXW_c"
+    <iframe width="47%" height="523" src="https://www.youtube.com/embed/2qdk33sXW_c"
         title="(역대급 땀범벅 주의💦) 하루 50분!! 1000 칼로리 불태우기 고강도 홈트 | BURN 1000 CALORIES - 50 MIN SUPER SWEATY HIIT WORKOUT"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <br>
-    <video width="98%" controls src="video/file_example_MP4_640_3MG.mp4"></video>
+    <video width="94%" controls src="video/file_example_MP4_640_3MG.mp4"></video>
 
     <form action="">
-        <h2>表單</h2>
+        <h2 id="FormTitle">表單</h2>
         <h3>需要更多資訊?<br>免費索取健身資訊</h3>
         <p>前100名還贈送［我愛健身］書籍一本!</p>
 
 
-
         <label for="email">E-mail:</label>
-        <input type="text" name="email" id="email" placeholder="test@gmail.com">
+        <input style="height: 40px;font-size: 30px;" type="text" name="email" id="email" placeholder="test@gmail.com">
         <p>
             <label for="age">是否滿18歲?:</label>
-            <input type="checkbox" name="age">滿18歲
+            <input style="transform: scale(2.5); margin-right: 10px;" type="checkbox" name="age">滿18歲
         </p>
 
         <p>
             <label for="age_2">目前年齡:</label>
             <select name="age_2" id="">
-                <option value="15歲">15歲</option>
-                <option value="16歲">16歲</option>
-                <option value="17歲">17歲</option>
-                <option value="18歲">18歲</option>
-                <option value="19歲">19歲</option>
-                <option value="20歲">20歲</option>
+                <option value="15-19歲">15-19歲</option>
+                <option value="20-24歲">20-24歲</option>
+                <option value="25-29歲">25-29歲</option>
+                <option value="30-35歲">30-35歲</option>
+                <option value="35-39歲">35-39歲</option>
+                <option value="40-歲">40歲以上</option>
             </select>
-
+            <br>
+            <br>
             <label for="commend">您的寶貴意見:</label>
         </p>
         <!-- <p>
