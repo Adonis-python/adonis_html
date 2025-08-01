@@ -32,14 +32,13 @@
         <input type="text" name="name" id="name" placeholder="王曉明">
         <br>
         <label for="height">身高</label>
-        <input type="text" name="height" id="height" placeholder="178" required>公分
+        <input type="number" name="height" id="height" placeholder="178" required>公分
         <br>
-
-        <label for="Weight">體重</label>
-        <input type="text" name="Weight" id="naWeightme" placeholder="73" required>公斤
+        <label for="weight">體重</label>
+        <input type="number" name="weight" id="weight" placeholder="50" required>公斤
         <br>
         <br>
-        <button type="submit">計算BMI</button>
+        <button type="submit" onclick="calc()">計算BMI</button>
     </form>
     <br>
     <br>
@@ -49,31 +48,40 @@
     <br>
 
     <script>
+        function calc() {
+            //取得元件
+            const heightElement = document.querySelector("#height");
+            const weightElement = document.querySelector("#weight");
+            console.log(heightElement, weightElement)
+
+            let height = heightElement.value;
+            let weight = weightElement.value;
+            console.log(height, weight)
+
+            // 外部輸入
+            // let height = Number(prompt("請輸入身高"));
+            // let weight = Number(prompt("請輸入體重"));
 
 
-        // 外部輸入
-        let height = Number(prompt("請輸入身高"));
+            let bmi = getBMI(height, weight);
+            let comment = getBMIComment(bmi);
 
-        let weight = Number(prompt("請輸入體重"));
+            //輸出優化
+            console.log(bmi.toFixed(2));
+            document.write(`<p>身高:${height}<br>體重:${weight}</p>`);        
+            console.log(`屬於：${comment}`);
+            document.write(`<p>你的 BMI 是 ${bmi.toFixed(2)}</p><p>屬於：${comment}</p>`);
 
+    //         document.write(`
+    // <div style="font-size: 24px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    //     <p>📏 身高：${height} cm</p>
+    //     <p>⚖️ 體重：${weight} kg</p>
+    //     <p>📊 BMI：<strong>${bmi.toFixed(2)}</strong></p>
+    //     <p>🧠 判定結果：<span style="color: blue;">${comment}</span></p>
+    // </div>
+    //     `);
+        }
 
-        let bmi = getBMI(height, weight);
-        let comment = getBMIComment(bmi);
-
-        //輸出優化
-        // console.log(bmi.toFixed(2));
-        // document.write(`<p>身高:${height}<br>體重:${weight}</p>`);        
-        // console.log(`屬於：${comment}`);
-        // document.write(`<p>你的 BMI 是 ${bmi.toFixed(2)}</p><p>屬於：${comment}</p>`);
-
-        document.write(`
-    <div style="font-size: 24px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-        <p>📏 身高：${height} cm</p>
-        <p>⚖️ 體重：${weight} kg</p>
-        <p>📊 BMI：<strong>${bmi.toFixed(2)}</strong></p>
-        <p>🧠 判定結果：<span style="color: blue;">${comment}</span></p>
-    </div>
-        `);
 
         // for (let i = 0; i < 3; i++) {
 
